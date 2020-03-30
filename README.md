@@ -52,7 +52,7 @@ In de Class Library maak je onder Entiteiten volgende klassen aan :
 In de Class Library maak je onder Services volgende klassen aan :   
 * De klasse Verblijven
   * STATISCHE veld
-    * List<Verblijf> AlleVerblijven
+    * List van Verblijf objecten met de naam AlleVerblijven
   * STATISCHE void methode Initialiseer 
     Deze methode vult het statische veld AlleVerblijven met wat testmateriaal.  
     Onderaan deze tekst kan je de voorbeeldgegevens die ik in dit project gebruik terugvinden.
