@@ -4,7 +4,7 @@
 
 Hier wordt enkel stap voor stap opgelijst wat je moet doen.  
 
-In de Class Library maak je volgende klassen aan :  
+In de Class Library maak je onder Entiteiten volgende klassen aan :  
 
 * De klasse Verblijf  
   * Eigenschappen  
@@ -23,6 +23,44 @@ In de Class Library maak je volgende klassen aan :
     * prop  Verhuurbaar, bool : standaardwaarde = true  
   * Constructor  
     1 argumentloze constructor die de prop ID (beter : private variabele id) vult met een nieuwe GUID
+* De klasse Vakantiehuis
+  Erft over van Verblijf
+  * Eigenschappen
+    * prop Vaatwas, nullable bool
+    * prop Wasmachine, nullable bool
+    * prop Houtkachel, nullable bool
+  * ToString wordt overschreven : "H - huisnaam - gemeente"
+* De klasse Caravan
+  Erft over van Verblijf
+  * Eigenschappen
+    * prop PersoonlijkSanitair, nullable bool
+  * ToString wordt overschreven : "C - huisnaam - gemeente" 
+* De klasse Persoon
+  * Eigenschappen
+    * prop Naam, string
+    * prop Voornaam, string
+    * prop Adres, string
+    * prop Gemeente, string
+    * prop Land, string
+    * prop Telefoon, string
+    * prop Email, string
+* De klasse Huurder
+  Erft over van Persoon
+  * Eigenschappen
+    * prop IsBlackListed, bool, standaardwaarde = false
 
-    
+In de Class Library maak je onder Services volgende klassen aan :   
+* De klasse Verblijven
+  * STATISCHE veld
+    * List<Verblijf> AlleVerblijven
+  * STATISCHE void methode Initialiseer 
+    Deze methode vult het statische veld AlleVerblijven met wat testmateriaal.  
+    Onderaan deze tekst kan je de voorbeeldgegevens die ik in dit project gebruik terugvinden.
+ 
+ WPF : MainWindow
+ * Zorg er voor dat bij opstart de listbox lstVerblijven gevuld wordt met alle vakantieverblijven
+ * in cmbSoorten zijn reeds 3 items opgenomen : "Alle verblijven", "Vakantiehuisjes" en "Caravans".  
+   Wordt "Alle verblijven" geselecteerd, dan toon je in lstVerblijven alle verblijven.  
+   Wordt "Vakantiehuisjes" geselecteerd, dan toon je enkel de vakantiehuisjes.  
+   Wordt "Caravans" geselecteerd, dan toon je enkel de caravans.  
 
